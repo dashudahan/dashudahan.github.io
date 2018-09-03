@@ -95,23 +95,25 @@
 但是，当多人共同完成某个项目的时候，该项目会有一定的编码规范。如: 编辑某个语言时的设置，代码的缩进等等，这个时候就需要对该项目进行单独的工作空间级别的设置。</p>
 <h3>1.2 更改默认用户设置与工作空间设置</h3>
 <p>VSCode 的设置文件为<code>setting.json</code>。</p>
-<p>用户设置的文件保存在如下目录： </p>
+<p>用户设置的文件保存在如下目录：</p>
 <blockquote>
 <ul>
 <li>Window
-%APPDATA%\Code\User\settings.json </li>
+%APPDATA%\Code\User\settings.json</li>
 <li>Mac
-$HOME/Library/Application Support/Code/User/settings.json </li>
+$HOME/Library/Application Support/Code/User/settings.json</li>
 <li>Linux
 $HOME/.config/Code/User/settings.json</li>
 </ul>
 </blockquote>
 <p>工作空间设置的文件保存在当前目录的.vscode文件夹下。</p>
-<p>有四种方式更改设置： 
-- 点击 VSCode 的【文件】 &gt; 【首选项】 &gt; 【设置】 ，打开设置面板；
-- 在 VSCode 中使用快捷键 <code>Ctrl + ,</code>打开
-- 使用编辑器直接打开setting.json文件
-- 在 VSCode 中使用<code>Ctrl+Shift+P</code>打开命令面板，输入 Preferences: Open User Settings 或 Preferences: Open Workspace Settings 。</p>
+<p>有四种方式更改设置：</p>
+<ul>
+<li>点击 VSCode 的【文件】 &gt; 【首选项】 &gt; 【设置】 ，打开设置面板；</li>
+<li>在 VSCode 中使用快捷键 <code>Ctrl + ,</code>打开</li>
+<li>使用编辑器直接打开setting.json文件</li>
+<li>在 VSCode 中使用<code>Ctrl+Shift+P</code>打开命令面板，输入 Preferences: Open User Settings 或 Preferences: Open Workspace Settings 。</li>
+</ul>
 <h3>1.3 对某个语言进行特定配置</h3>
 <p>可以对某个语言进行专门的设定。在 VS Code 中使用 <code>Ctrl+Shift+P</code>打开命令面板，输入 Preferences: Configure language specific settings… ，然后选择相应的语言进行设置。</p>
 <p>也可以直接对setting.json进行编辑。如下：</p>
@@ -159,88 +161,109 @@ $HOME/.config/Code/User/settings.json</li>
   一款在左下角显示文件大小的插件，还是挺实用的。</p>
 </li>
 <li>
-<p><strong>Guides：缩进提示插件</strong></p>
+<p><strong>Guides：缩进提示插件</strong>
+  有人说，vscode里已经有缩进参考线了呀，还需要Guides做什么？
+  的确，vscode有缩进线，但是这个Guides比自带的缩进线更好。</p>
 </li>
 </ul>
-<p>有人说，vscode里已经有缩进参考线了呀，还需要Guides做什么？</p>
-<p>的确，vscode有缩进线，但是这个Guides比自带的缩进线更好。</p>
 <h4>2.2.2 配置 Python</h4>
 <ul>
-<li><strong>配置flake8</strong></li>
-</ul>
-<p>flake8用于提示代码哪里出错，代码格式不规范也会提示。</p>
-<ol>
-<li>打开命令行</li>
+<li>
+<p><strong>配置flake8</strong>
+  flake8用于提示代码哪里出错，代码格式不规范也会提示。</p>
+</li>
+<li>
+<p>打开命令行</p>
+</li>
 <li>输入 "pip install flake8"</li>
-<li>安装flake8成功后，打开VScode，文件-&gt;首选项-&gt;用户设置，在settings.json文件中输入<code>"python.linting.flake8Enabled": true</code></li>
-</ol>
-<blockquote>
+<li>
+<p>安装flake8成功后，打开VScode，文件-&gt;首选项-&gt;用户设置，在settings.json文件中输入<code>"python.linting.flake8Enabled": true</code></p>
+</li>
+<li>
 <p><strong>禁止 flake8 提示 line too long</strong></p>
-<p><code>json
-{
-    "python.linting.flake8Args": ["--max-line-length=248"]
-}</code></p>
-</blockquote>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;python.linting.flake8Args&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;--max-line-length=248&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <ul>
 <li><strong>pylint</strong></li>
 </ul>
-<p><code>pip install pylint</code></p>
+<div class="highlight"><pre><span></span>pip install pylint
+</pre></div>
+
+
 <ul>
-<li><strong>配置yapf 或 autopep8</strong></li>
-</ul>
-<p>安装yapf之后在VScode中按Alt+Shift+F即可自动格式化代码</p>
-<ol>
-<li>打开命令行</li>
+<li>
+<p><strong>配置yapf 或 autopep8</strong>
+  安装yapf之后在VScode中按Alt+Shift+F即可自动格式化代码</p>
+</li>
+<li>
+<p>打开命令行</p>
+</li>
 <li>输入 "pip install yapf"</li>
 <li>安装yapf成功后，打开VScode，文件-&gt;首选项-&gt;用户设置，在settings.json文件中输入<code>"python.formatting.provider": "yapf"</code></li>
-</ol>
+</ul>
 <h2>几个小技巧</h2>
 <ul>
-<li>查看函数或者类的定义</li>
-</ul>
-<p>Ctrl+鼠标左键点击函数名或者类名即可跳转到定义处。</p>
-<p>在函数名或者类名上按F12也可以实现同样功能</p>
-<ul>
-<li>更改变量名</li>
-</ul>
-<p>在变量名上按F2即可实现重命名变量</p>
-<ul>
-<li>用户代码片段
+<li>
+<p>查看函数或者类的定义
+  Ctrl+鼠标左键点击函数名或者类名即可跳转到定义处。
+  在函数名或者类名上按F12也可以实现同样功能</p>
+</li>
+<li>
+<p>更改变量名
+  在变量名上按F2即可实现重命名变量</p>
+</li>
+<li>
+<p>用户代码片段
   打开【文件】—【首选项】—【用户代码片段】。
   vscode会提示选择语言，输入Python并回车，打开了python.json。
-  内容格式为json，在根级下面新增一个自己的object，内容如下：</li>
+  内容格式为json，在根级下面新增一个自己的object，内容如下：</p>
+</li>
 </ul>
-<p><code>"For in enumerator": {
-          "prefix": "for/enum",
-          "body": [
-              "for ${1:index}, ${2:item} in enumerate(${3:array}):",
-              "    ${4:pass}"
-          ],
-          "description": "For statement with enumerator"
-      }</code></p>
+<div class="highlight"><pre><span></span>&quot;For in enumerator&quot;: {
+      &quot;prefix&quot;: &quot;for/enum&quot;,
+      &quot;body&quot;: [
+          &quot;for <span class="cp">${</span><span class="mi">1</span><span class="p">:</span><span class="n">index</span><span class="cp">}</span>, <span class="cp">${</span><span class="mi">2</span><span class="p">:</span><span class="n">item</span><span class="cp">}</span> in enumerate(<span class="cp">${</span><span class="mi">3</span><span class="p">:</span><span class="n">array</span><span class="cp">}</span>):&quot;,
+          &quot;    <span class="cp">${</span><span class="mi">4</span><span class="p">:</span><span class="k">pass</span><span class="cp">}</span>&quot;
+      ],
+      &quot;description&quot;: &quot;For statement with enumerator&quot;
+  }
+</pre></div>
+
+
 <p>这样在我们输入for/enum再按回车后，就自动生成了：</p>
-<p><code>for index, item in enumerate(array):
-      pass</code></p>
+<div class="highlight"><pre><span></span>for index, item in enumerate(array):
+  pass
+</pre></div>
+
+
 <p>光标停留在index上并选中该词，我们可以直接修改完，按tab切换到item，然后是array、pass。</p>
 <ul>
-<li>python断点调试</li>
+<li>
+<p>python断点调试
+  在行号的左边点击即可设置断点，在左边的调试界面可以查看变量的变化</p>
+</li>
+<li>
+<p>调试时自动暂停在第一句
+  配置<code>"stopOnEntry"</code>，设置为false就可以不再暂停。</p>
+</li>
+<li>
+<p>隐藏菜单栏
+  这个属于个人习惯。
+  如果觉得菜单栏很碍眼，可以点击【查看】-&gt;【切换菜单栏】，即可隐藏菜单栏。
+  需要菜单栏的时候按Alt键即可查看</p>
+</li>
+<li>
+<p>设置快捷键
+  文件-&gt;首选项-&gt;键盘快捷方式，将需要的修改的快捷键的整个大括号里面的内容复制到右边<code>keybindings.json</code>文件中，然后修改“key”的值为你需要的快捷键即可。
+  我这边只修改了复制一行和删除一行的快捷键。</p>
+</li>
 </ul>
-<p>在行号的左边点击即可设置断点，在左边的调试界面可以查看变量的变化</p>
-<ul>
-<li>调试时自动暂停在第一句</li>
-</ul>
-<p>配置<code>"stopOnEntry"</code>，设置为false就可以不再暂停。</p>
-<ul>
-<li>隐藏菜单栏</li>
-</ul>
-<p>这个属于个人习惯。</p>
-<p>如果觉得菜单栏很碍眼，可以点击【查看】-&gt;【切换菜单栏】，即可隐藏菜单栏。</p>
-<p>需要菜单栏的时候按Alt键即可查看</p>
-<ul>
-<li>设置快捷键</li>
-</ul>
-<p>文件-&gt;首选项-&gt;键盘快捷方式，将需要的修改的快捷键的整个大括号里面的内容复制到右边<code>keybindings.json</code>文件中，然后修改“key”的值为你需要的快捷键即可。</p>
-<p>我这边只修改了复制一行和删除一行的快捷键。</p>
 <h2>主题与图标</h2>
 <p>推荐主题：</p>
 <ul>
