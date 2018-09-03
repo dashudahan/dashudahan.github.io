@@ -82,31 +82,31 @@
     
 </footer><!-- /.post-info -->
 
-        <h3>一、准备编译环境</h3>
+        <h2>一、准备编译环境</h2>
 <div class="highlight"><pre><span></span>yum groupinstall <span class="s1">&#39;Development Tools&#39;</span>
 yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel
 yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel
 </pre></div>
 
 
-<h3>二、下载Python3</h3>
+<h2>二、下载Python3</h2>
 <div class="highlight"><pre><span></span>wget --no-check-certificate https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tgz
 </pre></div>
 
 
-<h3>三、创建安装目录</h3>
+<h2>三、创建安装目录</h2>
 <div class="highlight"><pre><span></span>sudo mkdir /usr/local/python3
 </pre></div>
 
 
-<h3>四、解压安装包</h3>
+<h2>四、解压安装包</h2>
 <div class="highlight"><pre><span></span>tar -zxvf Python-3.6.5.tgz
 <span class="c1"># 切换到解压后的目录</span>
 <span class="nb">cd</span> Python-3.6.5/
 </pre></div>
 
 
-<h3>五、编译并安装</h3>
+<h2>五、编译并安装</h2>
 <div class="highlight"><pre><span></span>./configure --prefix<span class="o">=</span>/usr/local/python3 --enable-optimizations
 make
 make install
@@ -118,7 +118,7 @@ make install
 <li><code>--enable-optimizations</code> 为最优安装，建议使用这个参数，但是会导致安装慢。</li>
 <li><code>--prefix</code> 声明安装路径。</li>
 </ul>
-<h3>六、创建Python3链接</h3>
+<h2>六、创建Python3链接</h2>
 <div class="highlight"><pre><span></span>ln -s /usr/local/python3/bin/python3.6 /usr/bin/python3
 </pre></div>
 
@@ -128,7 +128,7 @@ make install
 </pre></div>
 
 
-<h3>七、创建Pip3链接</h3>
+<h2>七、创建Pip3链接</h2>
 <div class="highlight"><pre><span></span>ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
 </pre></div>
 
@@ -145,7 +145,7 @@ pip3 install --upgrade pip
 </pre></div>
 
 
-<h3>八、其他问题</h3>
+<h2>八、其他问题</h2>
 <p>1、不建议替换系统自带的python版本</p>
 
       </div><!-- /.entry-content -->

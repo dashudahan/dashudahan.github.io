@@ -83,8 +83,8 @@
     
 </footer><!-- /.post-info -->
 
-        <h3>1 安装相关软件</h3>
-<h4>1.1 用 pip 安装 ipython/jupyter/notebook</h4>
+        <h2>1 安装相关软件</h2>
+<h3>1.1 用 pip 安装 ipython/jupyter/notebook</h3>
 <div class="highlight"><pre><span></span>pip install ipython jupyter notebook
 ln -s /usr/local/python27/bin/ipython2 /usr/bin/ipython2
 ln -s /usr/local/python27/bin/jupyter-notebook /usr/bin/jupyter-notebook2
@@ -94,7 +94,7 @@ ln -s /usr/bin/jupyter-notebook2 /usr/bin/jupyter-notebook
 
 <p>==说明：==</p>
 <p>python2只能安装ipython的5.x版本。</p>
-<h4>1.2 安装 numpy/pandas/matplotlib</h4>
+<h3>1.2 安装 numpy/pandas/matplotlib</h3>
 <p>==说明：==</p>
 <p>一定要先安装Numpy，因为Python 的很多其他科学计算库都建立在该库的基础上。</p>
 <div class="highlight"><pre><span></span>pip install numpy
@@ -103,8 +103,8 @@ pip install matplotlib
 </pre></div>
 
 
-<h3>2 配置 jupyter</h3>
-<h4>2.1 生成配置文件</h4>
+<h2>2 配置 jupyter</h2>
+<h3>2.1 生成配置文件</h3>
 <div class="highlight"><pre><span></span># 生成配置文件
 jupyter-notebook --generate-config
 </pre></div>
@@ -115,8 +115,8 @@ jupyter-notebook --generate-config
 <li>生成的配置文件路径为：<code>~/.jupyter/jupyter_notebook_config.py</code></li>
 <li>在哪个账号下启动 jupyter，就要在哪个账号下生成配置文件。</li>
 </ul>
-<h4>2.2 修改jupyter的配置文件</h4>
-<h5>2.2.1 创建登录密码</h5>
+<h3>2.2 修改jupyter的配置文件</h3>
+<h4>2.2.1 创建登录密码</h4>
 <p>进入python环境，使用python生成登录密码。</p>
 <div class="highlight"><pre><span></span><span class="c1"># 导入设定密码模块</span>
 <span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">notebook.auth</span> <span class="kn">import</span> <span class="n">passwd</span>
@@ -141,7 +141,7 @@ c.NotebookApp.keyfile <span class="o">=</span> u<span class="s1">&#39;/absolute/
 </pre></div>
 
 
-<h5>2.2.2 修改配置文件</h5>
+<h4>2.2.2 修改配置文件</h4>
 <div class="highlight"><pre><span></span><span class="c1"># 设定ip访问，允许任意ip访问</span>
 c.NotebookApp.ip <span class="o">=</span> <span class="s1">&#39;*&#39;</span>
 <span class="c1"># 设置登录密码</span>
@@ -155,7 +155,7 @@ c.NotebookApp.notebook_dir <span class="o">=</span> u<span class="s1">&#39;/home
 </pre></div>
 
 
-<h4>2.3 启动 jupyter</h4>
+<h3>2.3 启动 jupyter</h3>
 <div class="highlight"><pre><span></span>nohup jupyter-notebook <span class="p">&amp;</span>
 </pre></div>
 
